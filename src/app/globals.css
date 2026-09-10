@@ -24,10 +24,12 @@ body {
   margin: 0;
   min-height: 100vh;
   background-color: var(--bg-primary);
-  background-image: url("/images/bg.jpeg");
+  background-image: linear-gradient(rgba(255, 244, 148, 0.22), rgba(255, 244, 148, 0.22)),
+    url("/bg.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -99,9 +101,10 @@ a {
   box-shadow: var(--shadow);
 }
 
-.banner-image {
+.logo-image {
   width: 100%;
   height: auto;
+  opacity: 0.9;
 }
 
 .intro-section,
@@ -292,17 +295,25 @@ a {
   border-radius: 22px;
 }
 
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
 .card-bullet {
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--pink), #f9db0f);
   box-shadow: 0 0 0 5px rgba(255, 74, 169, 0.12);
-  margin-bottom: 1rem;
+  flex-shrink: 0;
 }
 
 .category-card h3 {
-  margin: 0 0 0.75rem;
+  margin: 0;
   font-size: 1.35rem;
 }
 
@@ -321,7 +332,7 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 54px;
+  min-width: 100%;
   min-height: 54px;
   padding: 0.5rem 0.8rem;
   border-radius: 15px;
@@ -334,6 +345,7 @@ a {
 .step-card h3 {
   margin: 0 0 0.6rem;
   font-size: 1.25rem;
+  font-weight: 700;
 }
 
 .register-wrap {
@@ -377,7 +389,7 @@ a {
 }
 
 .site-footer {
-  padding: 1.5rem 0 3rem;
+  padding: 1.5rem 0 1.5rem;
   background: rgba(0, 0, 0, 0.92);
   color: #fff;
 }
@@ -423,7 +435,7 @@ a {
 }
 
 .socials a:hover {
-  background: var(--pink);
+  background: var(--color-yellow-500);
   transform: translateY(-2px);
 }
 

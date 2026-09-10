@@ -1,5 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaTiktok,
+} from "react-icons/fa6";
 
 const navigation = [
   { label: "Home", href: "#home" },
@@ -81,14 +87,14 @@ export default function Home() {
 
       <section className="hero-section" id="home">
         <div className="container hero-inner">
-          <div className="hero-banner" aria-label="Intellecta Genius Fest banner">
+          <div className="hero-banner" aria-label="Intellecta Genius Fest logo">
             <Image
-              src="/images/banner.jpeg"
-              alt="Intellecta Genius Fest banner"
+              src="/logo.jpg"
+              alt="Intellecta Genius Fest logo"
               width={1100}
               height={220}
               priority
-              className="banner-image"
+              className="logo-image"
             />
           </div>
         </div>
@@ -100,13 +106,15 @@ export default function Home() {
             <p className="eyebrow">Applicant Registration</p>
             <h1>Unleash Your Genius</h1>
             <p className="lead">
-              Welcome to Intellecta Genius Fest — a transformative platform where creativity,
-              intelligence, and innovation come together to shape the leaders of tomorrow.
+              Welcome to Intellecta Genius Fest — a transformative platform
+              where creativity, intelligence, and innovation come together to
+              shape the leaders of tomorrow.
             </p>
             <p>
-              Guided by our vision of “Unleashing the Power of Young Minds,” we provide
-              students with opportunities to explore hidden talents, build confidence, and
-              excel in a competitive yet inspiring environment.
+              Guided by our vision of “Unleashing the Power of Young Minds,” we
+              provide students with opportunities to explore hidden talents,
+              build confidence, and excel in a competitive yet inspiring
+              environment.
             </p>
             <div className="cta-row">
               <Link href="#register" className="primary-btn">
@@ -122,8 +130,8 @@ export default function Home() {
             <span className="stat-label">Featured event</span>
             <h2>Creative Writing</h2>
             <p>
-              An inspiring stage for young storytellers, thinkers, and dreamers to transform
-              imagination into impactful writing.
+              An inspiring stage for young storytellers, thinkers, and dreamers
+              to transform imagination into impactful writing.
             </p>
           </div>
         </div>
@@ -139,8 +147,9 @@ export default function Home() {
           <article className="info-card">
             <h3>Our Mission</h3>
             <p>
-              At Intellecta Genius Fest, our mission is to unleash the power of young minds by
-              creating meaningful opportunities beyond traditional learning.
+              At Intellecta Genius Fest, our mission is to unleash the power of
+              young minds by creating meaningful opportunities beyond
+              traditional learning.
             </p>
             <ul>
               <li>Encourage creative and critical thinking</li>
@@ -152,8 +161,9 @@ export default function Home() {
           <article className="info-card accent">
             <h3>Our Vision</h3>
             <p>
-              We aim to establish Intellecta Genius Fest as a trusted platform for creativity,
-              innovation, and talent recognition across schools and communities.
+              We aim to establish Intellecta Genius Fest as a trusted platform
+              for creativity, innovation, and talent recognition across schools
+              and communities.
             </p>
             <ul>
               <li>Inspire a new generation of thinkers and leaders</li>
@@ -173,8 +183,10 @@ export default function Home() {
         <div className="container categories-grid">
           {categories.map((category) => (
             <article key={category.title} className="category-card">
-              <div className="card-bullet" aria-hidden="true" />
-              <h3>{category.title}</h3>
+              <div className="category-header">
+                <div className="card-bullet" aria-hidden="true" />
+                <h3>{category.title}</h3>
+              </div>
               <p>{category.description}</p>
             </article>
           ))}
@@ -204,29 +216,38 @@ export default function Home() {
             <p className="eyebrow">Register now</p>
             <h2>Ready to become part of the next generation of innovators?</h2>
             <p>
-              Choose the category that matches your passion and complete your registration to
-              showcase your talent with confidence.
+              Choose the category that matches your passion and complete your
+              registration to showcase your talent with confidence.
             </p>
           </div>
 
           <div className="register-actions">
-          
             <button>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLScwiNAOAkQWvBLw3KQhOa0fssaUZ-q-nOqdNUH8SB7L_Np2Sg/viewform?usp=publish-editor" target="_blank" rel="noreferrer" className="register-card school-card" aria-label="School registration">
-                <div className="bg-red-500 uppercase px-4 py-4 text-white text-2xl font-semibold rounded-sm">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScwiNAOAkQWvBLw3KQhOa0fssaUZ-q-nOqdNUH8SB7L_Np2Sg/viewform?usp=publish-editor"
+                target="_blank"
+                rel="noreferrer"
+                className="register-card school-card"
+                aria-label="School registration"
+              >
+                <div className="bg-red-500 uppercase px-4 py-4 text-white text-2xl font-semibold rounded-xl transition-transform duration-200 hover:-translate-y-1 hover:scale-[1.02]">
                   Applicant Registration
                 </div>
               </a>
             </button>
             <button>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQtNAwkZUDHIWLvG1t-Yhs6cVfoHfsFpeljNmC4dE_BSuxXA/viewform?usp=publish-editor" target="_blank" rel="noreferrer" className="register-card school-card" aria-label="School registration">
-                <div className="bg-orange-500 uppercase px-7 py-4 text-white text-2xl font-semibold rounded-sm">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdQtNAwkZUDHIWLvG1t-Yhs6cVfoHfsFpeljNmC4dE_BSuxXA/viewform?usp=publish-editor"
+                target="_blank"
+                rel="noreferrer"
+                className="register-card school-card"
+                aria-label="School registration"
+              >
+                <div className="bg-orange-500 uppercase px-7 py-4 text-white text-2xl font-semibold rounded-xl transition-transform duration-200 hover:-translate-y-1 hover:scale-[1.02]">
                   School Registration
                 </div>
               </a>
             </button>
-
-  
           </div>
         </div>
       </section>
@@ -234,27 +255,66 @@ export default function Home() {
       <footer className="site-footer" id="contact">
         <div className="container footer-inner">
           <div>
-            <p className="footer-brand">INTELLECTA GENIUS FEST</p>
-            <p>Unleashing the Power of Young Minds</p>
+            <Image
+              src="/logo.jpg"
+              alt="Intellecta Genius Fest logo"
+              width={400}
+              height={100}
+              priority
+              className="footer-logo"
+            />
           </div>
 
           <div className="contact-block">
-            <p>Email: intellectageniusfest@gmail.com</p>
-            <p>Phone: +92 339 015 2289 &amp; +92 315 118 4504</p>
-          </div>
+            <p>
+              Email:{" "}
+              <a href="mailto:intellectageniusfest@gmail.com" className="text-yellow-400 hover:underline">
+                intellectageniusfest@gmail.com
+              </a>
+            </p>
 
+            <p>
+              Phone: <a href="tel:+923002289955" className="text-yellow-400 hover:underline">
+                +92 300 2289955
+              </a>
+              {" • "}
+              <a href="tel:+923151184504" className="text-yellow-400 hover:underline">
+                +92 315 1184504
+              </a>
+            </p>
+          </div>
           <div className="socials" aria-label="Social media links">
-            <a href="https://www.facebook.com/share/1EUuH5P6kt/" target="_blank" rel="noreferrer">
-              f
+            <a
+              href="https://www.facebook.com/share/1EUuH5P6kt/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+            >
+              <FaFacebookF />
             </a>
-            <a href="https://www.instagram.com/intellecta_geniusfest?utm_source=qr&igsh=YjNoOXBlb28xN2c0" target="_blank" rel="noreferrer">
-              ◎
+            <a
+              href="https://www.instagram.com/intellecta_geniusfest?utm_source=qr&igsh=YjNoOXBlb28xN2c0"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+            >
+              <FaInstagram />
             </a>
-            <a href="https://www.youtube.com/@Intellecta-pk" target="_blank" rel="noreferrer">
-              ▶
+            <a
+              href="https://www.youtube.com/@Intellecta-pk"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="YouTube"
+            >
+              <FaYoutube />
             </a>
-            <a href="https://www.tiktok.com/@intellecta2?_r=1&_t=ZS-95MPw4n3d48" target="_blank" rel="noreferrer">
-              ♪
+            <a
+              href="https://www.tiktok.com/@intellecta2?_r=1&_t=ZS-95MPw4n3d48"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="TikTok"
+            >
+              <FaTiktok />
             </a>
           </div>
         </div>
