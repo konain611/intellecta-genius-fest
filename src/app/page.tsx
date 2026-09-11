@@ -158,7 +158,7 @@ export default function Home() {
             </ul>
           </article>
 
-          <article className="info-card accent">
+          <article className="info-card">
             <h3>Our Vision</h3>
             <p>
               We aim to establish Intellecta Genius Fest as a trusted platform
